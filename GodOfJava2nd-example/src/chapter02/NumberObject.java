@@ -14,4 +14,19 @@ public class NumberObject<E> {
 		}
 		return temp;
 	}
+	public String[] printOtherBase(long value) {
+		ArrayList<String> arr = new ArrayList<>();
+		
+		String binary = Long.toBinaryString(value);
+		String hex = Long.toHexString(value);
+		String oct = Long.toOctalString(value);
+		
+		arr.add(binary);
+		arr.add(hex);
+		arr.add(oct);
+		
+		String[] strings = arr.toArray(new String[0]);
+		
+		return strings;
+	}
 }
