@@ -5,22 +5,19 @@ public class NumberObject {
 		// TODO Auto-generated method stub
 
 		NumberObject num = new NumberObject();
-		String data = "r1024";
-		if(num.parseLong(data)==-1) {
-			System.out.println(data + " is not a number");
-		} else {
-			System.out.println(data);
-		}
-		
+		num.parseLong("r1024");
+		num.parseLong("1024");
 		num.printOtherBase(1024);
 	}
 	
 	public long parseLong(String data) {
-		long temp = 0;
+		long temp = -1;
 		try {
 			temp = Long.parseLong(data);
+			System.out.println(temp);
 		} catch (NumberFormatException e) {
 			// TODO: handle exception
+			System.out.println(data + " is not a number");
 			return -1;
 		}
 		return temp;
