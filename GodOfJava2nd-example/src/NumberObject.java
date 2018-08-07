@@ -1,4 +1,3 @@
-
 public class NumberObject {
 
 	public static void main(String[] args) {
