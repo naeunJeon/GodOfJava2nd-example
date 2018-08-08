@@ -14,6 +14,10 @@ public class ManageHeight {
 		for(int i=1; i<=5; i++) {
 			manageHeight.printHeight(i);
 		}
+		
+		for(int i=1; i<=5; i++) {
+			manageHeight.printAverage(i);
+		}
 	}
 	
 	public void setData() {
@@ -60,6 +64,15 @@ public class ManageHeight {
 		for(int height : gradeHeights.get(classNo-1)) {
 			System.out.println(height);
 		}
+	}
+	
+	public void printAverage(int classNo) {
+		double sum = 0;
+		for(int height : gradeHeights.get(classNo-1)) {
+			sum += height;
+		}
+		System.out.println("Class No." + classNo);
+		System.out.println("Height average : "+ sum/gradeHeights.size());
 	}
 
 }
